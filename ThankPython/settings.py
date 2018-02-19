@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 import environ
-import dj_database_url
+# import dj_database_url
 root = environ.Path(__file__) - 1
 env = environ.Env(DEBUG=(bool, False),)
 environ.Env.read_env()
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'shop',
+
 ]
 
 MIDDLEWARE = [
@@ -118,7 +120,24 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+
+"""
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+"""
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+CART_SESSION_ID = 'cart'
+# django-paypal settings
+PAYPAL_RECEIVER_EMAIL = os.environ.get("PayPalEmail")
+PAYPAL_TEST = True
+#  TODO:  <18-02-18, yourname> #
+#Stripe API
+# STRIPE_PUBLIC_KEY = os.environ.get(STR_SECRET_KEY, "pk_test_pub_key")
+# STRIPE_SECRET_KEY = os.environ.get(STR_PUBLISHABLE_KEY, "pk_test_sec_key")
+
