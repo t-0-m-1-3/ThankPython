@@ -82,8 +82,8 @@ DATABASES = {
             'default': env.db(), # Raises exception URL not in os.environ
                 'extra': env.db('SQLITE_URL', default='sqlite:////tmp/my-tmp-sqlite.db')
                 }
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
