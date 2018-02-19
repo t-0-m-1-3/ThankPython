@@ -12,7 +12,17 @@
         <a href="/" class="logo">This is a Store Hate Typed for Jase</a>
     </div>
     <div id="subheader">
-        I Need to make a cart
+<div class="cart">
+    {% with total_items=carrt|length %}
+        {% if cart|length > 0 %}
+           Your carts got:
+           <a href="{% url "cart:cart_detaul" %}">
+               {{ total_items}} items {{total_items|pluralize }}, costing: ${{cart.get_total_price}}</a>
+           {% else %}
+           You should Add some Cool Stuff!!
+           {% endif %}
+           {% endwith %}
+</div>
     </div>
     <div id="content">
         {% block content %}

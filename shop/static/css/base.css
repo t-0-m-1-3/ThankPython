@@ -1,4 +1,3 @@
-
 body { 
     background-color: lightgrey;
     margin:0;
@@ -98,15 +97,6 @@ form p input {
     background:#efefef;
     color:#666;
     border-radius:4px;
-}
-
-ul.errorlist {
-   float:left;
-   color:#ff0000;
-   clear:both;
-   font-size:13px;
-   margin:0; 
-   padding:0;
 }
 
 
@@ -214,4 +204,3 @@ ul.errorlist {
 .product-detail h2 {
     margin-top:10px;
 }
-
