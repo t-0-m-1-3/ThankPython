@@ -13,7 +13,6 @@
         <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
         <p class="price">${{ product.price }}</p>
         {{ cart_product_form }} 
-        {{% csrf_token %}}
         <input type="submit"  value="Buy me!" />
         {{ product.description|linebreaks }}
     </div>
