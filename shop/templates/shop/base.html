@@ -16,7 +16,7 @@
     {% with total_items=carrt|length %}
         {% if cart|length > 0 %}
            Your carts got:
-           <a href="{% url "cart:cart_detaul" %}">
+           <a href="{% url "cart:cart_detail" %}">
                {{ total_items}} items {{total_items|pluralize }}, costing: ${{cart.get_total_price}}</a>
            {% else %}
            You should Add some Cool Stuff!!
