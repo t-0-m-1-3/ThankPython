@@ -14,7 +14,7 @@ from django.urls import reverse_lazy
 import os
 import environ
 # import dj_database_url
-root = environ.Path(__file__) - 1
+root = environ.Path(__file__) - 3
 env = environ.Env(DEBUG=(bool, False),)
 environ.Env.read_env()
 
