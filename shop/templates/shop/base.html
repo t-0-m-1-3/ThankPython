@@ -8,34 +8,25 @@
 </head>
 <body>
     <div id="header">
-        <a href="/" class="logo">OFP Canned Project</a>
-        <img id="" src="" alt="" />
+        <!-- <a href="/" class="logo">OFP Canned Project</a> -->
+        <a href="/" class="logo">
+        <img id="" src="../../static/img/no_image.png" alt="return to home" />
+        <!-- <img id="" src="../../static/img/" alt="" /> -->
+</a>
     </div>
     <div id="subheader">
 <div class="cart">
-    {% with total_items=carrt|length %}
+    {% with total_items=cart|length %}
         {% if cart|length > 0 %}
            Your carts got:
            <a href="{% url "cart:cart_detail" %}">
-               {{ total_items}} items {{total_items|pluralize }}, costing: ${{cart.get_total_price}}</a>
+                        {{ total_items }} item{{ total_items|pluralize }}, ${{ cart.get_total_price }}
+
            {% else %}
            You should Add some Cool Stuff!!
            {% endif %}
            {% endwith %}
 </div>
-    </div>
-        <div class="cart">
-            {% with total_items=cart|length %}
-                {% if cart|length > 0 %}
-                    Your cart: 
-                    <a href="{% url "cart:cart_detail" %}">
-                        {{ total_items }} item{{ total_items|pluralize }}, ${{ cart.get_total_price }}
-                    </a>
-                {% else %}
-                    Your cart is empty.
-                {% endif %}
-            {% endwith %}
-        </div>
     </div>
     <div id="content">
         {% block content %}
