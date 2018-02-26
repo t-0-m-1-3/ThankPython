@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 # from two_factor.urls import urlpatterns as tf_urls
-from two_factor.admin import AdminSiteOTPRequired
+# from two_factor.admin import AdminSiteOTPRequired
 
-admin.site.__class__ = AdminSiteOTPRequired
+# admin.site.__class__ = AdminSiteOTPRequired
 urlpatterns = [
     url(r'^secret/', admin.site.urls),
     url(r'^admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
