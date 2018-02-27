@@ -116,10 +116,14 @@ ul.errorlist {
     font-family: 'Ubuntu', sans-serif;
     float:left;
     color:#333;
-    font-size:22px;
+    font-size:14px;
     margin-right:10%;
 }
 
+#header .logo-image {
+    height: 25px;
+    width: 20p;
+}
 #subheader .cart {
     float:right;
     padding-top:4px;
